@@ -1,0 +1,15 @@
+
+public class CountingSort {
+
+	
+	public static void main(String[] args) {
+		
+		int a[] = {1,4,2,1,4,3};
+		
+		int b[] = new int[a.length];
+		
+		
+		
+	}
+	
+}

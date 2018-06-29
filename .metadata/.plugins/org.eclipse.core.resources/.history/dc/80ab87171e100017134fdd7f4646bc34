@@ -1,0 +1,15 @@
+
+public class Find2EleWhoseSumIsCloseTo0 {
+
+	public static void main(String[] args) {
+		
+		int a[] = {1,60,-10,70,-80,85};
+		
+		
+		
+		
+		
+		
+	}
+	
+}

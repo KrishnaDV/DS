@@ -1,0 +1,9 @@
+//Given an array of n num. Find the first ele in the array which is repeated. 
+// eg. in {3,2,1,2,2,3} first repeated number is 3 not 2. Return first ele among repeated num.
+public class Sort5 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

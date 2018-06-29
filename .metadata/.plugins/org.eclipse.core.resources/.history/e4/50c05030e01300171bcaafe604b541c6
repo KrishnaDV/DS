@@ -1,0 +1,20 @@
+
+public class RevWordsInSentence {
+
+	public static void main(String[] args) {
+		
+		String s = "This is a Career Monk String";
+		
+		String res = revWords(s);
+		
+		System.out.println(res);
+	}
+
+	private static String revWords(String s) {
+		
+		
+		
+		
+		return null;
+	}
+}

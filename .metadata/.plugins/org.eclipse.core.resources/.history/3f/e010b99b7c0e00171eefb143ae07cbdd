@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+
+
+public class Graph1 {
+
+	//vertices of graph
+	int V;
+	
+	//array of lists to store adjacent vertices.
+	LinkedList<Integer> adj[];
+	
+	public Graph1(int i){
+		
+		V = i;
+		
+		adj = new LinkedList[i];
+		
+		for(int j=0;j<i;j++){
+			
+			adj[j] = new LinkedList<Integer>();
+			
+		}
+		
+	}
+		
+		public void addEdge(int a, int b){
+			
+			
+			
+			
+			
+		}
+		
+		
+	
+}

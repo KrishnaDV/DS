@@ -1,0 +1,23 @@
+
+public class StringReverse {
+
+	public static void main(String[] args) {
+		
+		String s = "nanna";
+		
+		String res = strRev(s);
+		
+		System.out.println(res);
+		
+	}
+
+	private static String strRev(String s) {
+		
+		
+		
+		
+		return s;
+		
+	}
+	
+}

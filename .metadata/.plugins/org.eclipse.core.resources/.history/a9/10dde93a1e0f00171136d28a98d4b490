@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class MaxCount {
+
+	public static void main(String[] args) {
+
+		int a[] = { 1, 3, 2, 3, 2, 3, 3, 1, 3, 3, 4, 4 };
+
+		Arrays.sort(a);
+
+		int count = 1, ele = a[0], maxcount = 0;
+
+		for (int i = 0; i < a.length - 1; i++) {
+
+			if (a[i] == a[i + 1]) {
+
+				count++;
+
+			}
+
+			else {
+
+				if (count > maxcount) {
+
+					maxcount = count;
+
+					ele = a[i];
+				}
+
+				count = 1;
+
+			}
+
+		}
+
+		System.out.println(ele);
+
+	}
+
+}
