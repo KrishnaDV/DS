@@ -6,6 +6,8 @@ public class _13HashMap {
 	public static void main(String[] args) {
 		Map<Integer,String> map=new HashMap<Integer,String>();//<> from jdk 1.7
 		
+
+		
 		map.put(106, "Ramesh");
 		map.put(101,"Suraj");
 		map.put(102, "Kiran");
@@ -26,18 +28,25 @@ public class _13HashMap {
 		}
 		
 		Set<Integer> keySet=map.keySet();
-		System.out.println(keySet);
+		//System.out.println(keySet);
 		
-		for(int key:keySet){
-			System.out.println(key+" ==>"+map.get(key));
-		}
+//		for(int key:keySet){
+//			System.out.println(key+" ==>"+map.get(key));
+//		}
+		
 		
 		
 		Set<String>  values=new HashSet<String>(map.values());
 		
 		System.out.println(values);
+		
+		map.putIfAbsent(104, "Satish");
+		
+		
+		System.out.println(map);
+		
 		for(String value:values){
-			System.out.println(value);
+		//	System.out.println(value);
 		}
 	}
 }
