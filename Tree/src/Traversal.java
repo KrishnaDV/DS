@@ -42,6 +42,8 @@ public class Traversal {
 
 			preOrder(t.getRight());
 
+		}else {
+			return;
 		}
 
 	}

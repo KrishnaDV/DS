@@ -21,17 +21,13 @@ public class searchEle {
 	}
 
 	public static boolean search(Tree t, int i) {
-
 		if (t == null) {
-
 			return false;
 		}
-
-		if (t.getData() == i)
-
+		if (t.getData() == i) {
 			return true;
+		}
 
 		return search(t.getLeft(), i) || search(t.getRight(), i);
 	}
-
 }
