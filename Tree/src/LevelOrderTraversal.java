@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -21,7 +21,7 @@ public class LevelOrderTraversal {
 		t2.setLeft(t5);
 		t2.setRight(t6);
 
-		ArrayList<ArrayList<Integer>> res = levelOrder(t);
+		List<List<Integer>> res = levelOrderTraverse(t);
 		System.out.println(res);
 		doBfs(t);
 	}
@@ -41,33 +41,35 @@ public class LevelOrderTraversal {
 			}
 		}
 	}
-
-	public static ArrayList<ArrayList<Integer>> levelOrder(Tree root) {
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		ArrayList<Integer> nv = new ArrayList<Integer>();
-		if (root == null) {
-			return result;
-		}
-		Queue<Tree> curr = new LinkedList<Tree>();
-		Queue<Tree> next = new LinkedList<Tree>();
-		curr.add(root);
-		while (!curr.isEmpty()) {
-			Tree tmp = curr.remove();
-			if (tmp.getLeft() != null) {
-				next.add(tmp.getLeft());
-			}
-			if (tmp.getRight() != null) {
-				next.add(tmp.getRight());
-			}
-			nv.add(tmp.getData());
-			if (curr.isEmpty()) {
-				curr = next;
-				next = new LinkedList<Tree>();
-				result.add(nv);
-				nv = new ArrayList<Integer>();
-			}
-		}
-		return result;
-	}
+	
+	public static List<List<Integer>> levelOrderTraverse(Tree root) {
+        List<List<Integer>> resultList = new LinkedList<>();
+        if(root == null){
+            return resultList;
+        }
+        Queue<Tree> queue = new LinkedList<>();
+        queue.add(root);
+        queue.add(null);
+        List<Integer> currentList = new LinkedList<>();
+        while(!queue.isEmpty()){
+        	Tree currentNode = queue.poll();
+            if(currentNode!=null){
+                currentList.add(currentNode.getData());
+                if(currentNode.getLeft()!=null){
+                    queue.add(currentNode.getLeft());
+                }
+                if(currentNode.getRight()!=null){
+                    queue.add(currentNode.getRight());
+                }
+            }else{
+                resultList.add(currentList);
+                currentList = new LinkedList<>();
+                if(!queue.isEmpty()){
+                    queue.add(null);
+                }
+            }
+        }
+        return resultList;
+    }
 
 }
